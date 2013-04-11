@@ -9,6 +9,41 @@
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+         <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          +                                   position.timestamp          + '<br />';
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
+    }
+
+    </script>
+
 	</head>
 	<body>
 
@@ -20,7 +55,10 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<p>I'm first in the source order so I'm shown as the page.</p>
+    <p id="geolocation">Finding geolocation...</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet tellus varius eros faucibus vel porttitor sapien eleifend. Vestibulum vulputate, tellus sed auctor venenatis, magna augue malesuada arcu, quis tempus augue ante in nibh. Phasellus viverra, nisl sit amet scelerisque malesuada, orci quam luctus nibh, sed dapibus sem nulla vel sapien. Nulla facilisi. Sed ornare quam vel quam tincidunt imperdiet. Nullam vehicula porttitor lacus ac commodo. Ut est odio, fringilla ut laoreet posuere, hendrerit quis mauris. Maecenas sem leo, pretium in faucibus non, lobortis euismod odio. Pellentesque et lacus mi, a convallis turpis. Integer mattis condimentum eros nec malesuada. Nam sed enim condimentum elit posuere scelerisque. Vestibulum tincidunt, sem ut iaculis accumsan, dolor nibh dignissim sem, eget venenatis elit velit at nunc. Mauris sit amet felis ligula. Etiam accumsan ipsum vitae erat porttitor aliquam a ut arcu. Ut ac tellus ac nisl tristique bibendum. Ut consectetur ultricies ligula at tempus. </p>
+        
 		<p>View internal page called <a href="#bar" data-transition="flip">bar</a></p>
 	</div><!-- /content -->
 
