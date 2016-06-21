@@ -10,7 +10,24 @@
 		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
          <script type="text/javascript" charset="utf-8">
+// Add to index.js or the first page that loads with your app.
+// For Intel XDK and please add this to your app.js.
 
+document.addEventListener('deviceready', function () {
+  // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+  };
+
+  window.plugins.OneSignal.init("3aabf1df-f401-48d2-9e20-e5c8669ff254",
+                                 {googleProjectNumber: "627825968483"},
+                                 notificationOpenedCallback);
+  
+  // Show an alert box if a notification comes in when the user is in your app.
+  window.plugins.OneSignal.enableInAppAlertNotification(true);
+}, false);
     // Wait for Cordova to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
