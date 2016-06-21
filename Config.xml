@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>My Phonegap App</name>
+
+    <description>
+        This is an example phonegap app
+    </description>
+
+    <author href="https://www.javivilchis.com" email="javivilchis@gmail.com">
+        Javi-Air
+    </author>
+	<platform name="android" />
+	<!-- Push Plugin -->
+	<plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
+	</widget>
