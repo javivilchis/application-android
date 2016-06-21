@@ -19,6 +19,7 @@ document.addEventListener('deviceready', function () {
   
   var notificationOpenedCallback = function(jsonData) {
     console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+    alert('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
   };
 
   window.plugins.OneSignal.init("3aabf1df-f401-48d2-9e20-e5c8669ff254",
