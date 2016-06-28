@@ -17,6 +17,18 @@
         Javi-Air
     </author>
 	<platform name="android" />
+	<!-- Plugin -->
+	<preference name="org.apache.cordova.battery-status" />
+	<preference name="org.apache.cordova.spashscreen" />
 	<!-- Push Plugin -->
 	<plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
+	<!-- icons -->
+	<icon src="icon.png" />
+	<icon src="/images/icons/ldpi.png" platform="android" qualifier="ldpi" />
+	<icon src="/images/icons/mdpi.png" platform="android" qualifier="mdpi" />
+	<icon src="/images/icons/hdpi.png" platform="android" qualifier="hdpi" />
+	<icon src="/images/icons/xhdpi.png" platform="android" qualifier="xhdpi" />
+	<icon src="/images/icons/xxhdpi.png" platform="android" qualifier="xxhdpi" />
+	<icon src="/images/icons/xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
+	
 	</widget>
