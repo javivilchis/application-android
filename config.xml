@@ -19,12 +19,12 @@
 	<platform name="android" platform="android"  />
 	<!-- Plugin -->
 	<preference name="org.apache.cordova.battery-status" />
-	<plugin name="cordova-plugin-splashscreen" source="pgb" />
-	<plugin name="nl.x-services.plugins.toast" source="pgb" />
-	<plugin name="fi.avaus.cordova.geolocation" source="pgb" />
-	<plugin name="com.pushapps.phonegap" source="pgb" />
-	<plugin name="org.apache.cordova.camera"source="pgb" />
-	<plugin name="org.apache.cordova.dialogs" source="pgb" />
+	<plugin name="cordova-plugin-splashscreen" />
+	<plugin name="nl.x-services.plugins.toast" />
+	<plugin name="fi.avaus.cordova.geolocation" />
+	<plugin name="com.pushapps.phonegap" />
+	<plugin name="org.apache.cordova.camera" />
+	<plugin name="org.apache.cordova.dialogs" />
 	<!-- Push Plugin -->
 	<plugin name="com.phonegap.plugins.pushplugin" source="pgb" />
 	<!-- icons -->
