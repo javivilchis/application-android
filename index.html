@@ -73,6 +73,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
+            	<div id="geolocation"></div>
                 <h1>Your Favorite Source of Free Bootstrap Themes</h1>
                 <hr>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
@@ -102,6 +103,17 @@
                     <hr class="primary">
                 </div>
             </div>
+        </div>
+        <div class="container">
+        	<div class="row">
+        	<div class="col-lg-12 col-md-12 text-center">
+        		<h2 class="section-heading">Take a Picture</h2>
+        		<button id="cameraButton" type="button" class="btn btn-success btn-lg" onclick="getPicture()">
+				  <span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Picture
+				</button>
+        		<img src="" id=MyImage">
+        	</div>
+        	</div>
         </div>
         <div class="container">
             <div class="row">
@@ -277,6 +289,28 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
     <script type="text/javascript" charset="utf-8">
+    
+    // take a picture
+    document.addEventListener('deviceready', function(){alert('device ready');}, false);
+    
+    function getPicture(){
+    	navigator.camera.getPicture(
+    		function(imagURI){
+    			var image = document.getElementById('myImage');
+    			image.src = imageURI;
+    		},
+    		function(message){
+    			alert('failed because: ' + message);
+    		},
+    		{
+    			quality: 50,
+    			destinationType: Camera.DestinationType.FILE_URI
+    		}
+    	);
+    }
+    
+    
+    
 			// Add to index.js or the first page that loads with your app.
 			// For Intel XDK and please add this to your app.js.
 
