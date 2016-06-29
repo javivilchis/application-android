@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns   = "http://www.w3.org/ns/widgets"
+<widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.example"
         versionCode = "10" 
@@ -16,10 +16,14 @@
     <author href="https://www.javivilchis.com" email="javivilchis@gmail.com">
         Javi-Air
     </author>
-	<platform name="android" />
+	<platform name="android" platform="android"  />
 	<!-- Plugin -->
 	<preference name="org.apache.cordova.battery-status" />
 	<preference name="org.apache.cordova.spashscreen" />
+	<plugin name="nl.x-services.plugins.toast" spec="2.0.2" source="pgb" />
+	<plugin name="fi.avaus.cordova.geolocation" spec="0.3.11" source="pgb" />
+	<plugin name="com.pushapps.phonegap" spec="1.7.1" source="pgb" />
+
 	<!-- Push Plugin -->
 	<plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
 	<!-- icons -->
@@ -32,11 +36,11 @@
 	<icon src="images/icons/xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
 
 	<!-- Splash screen -->
-	<splash src="splash.png" />
+	<splash src="splash.png" platform="android" />
 	<icon src="images/splash/ldpi-p.png" platform="android" qualifier="ldpi" />
 	<icon src="images/splash/mdpi-p.png" platform="android" qualifier="mdpi" />
 	<icon src="images/splash/hdpi-p.png" platform="android" qualifier="hdpi" />
 	<icon src="images/splash/xhdpi-p.png" platform="android" qualifier="xhdpi" />
 	<icon src="images/splash/xxhdpi-p.png" platform="android" qualifier="xxhdpi" />
 	<icon src="images/splash/xxxhdpi-p.png" platform="android" qualifier="xxxhdpi" />
-	</widget>
+</widget>
