@@ -20,8 +20,7 @@
 	<!-- Plugin -->
 	<preference name="org.apache.cordova.battery-status" />
 	<plugin name="cordova-plugin-splashscreen" />
-	<plugin name="nl.x-services.plugins.toast" />
-	<plugin name="fi.avaus.cordova.geolocation" />
+	<plugin name="nl.x-services.plugins.toast" />	
 	<plugin name="com.pushapps.phonegap" />
 	<plugin name="org.apache.cordova.camera" />
 	<plugin name="org.apache.cordova.dialogs" />
