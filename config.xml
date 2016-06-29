@@ -30,5 +30,17 @@
 	<icon src="/images/icons/xhdpi.png" platform="android" qualifier="xhdpi" />
 	<icon src="/images/icons/xxhdpi.png" platform="android" qualifier="xxhdpi" />
 	<icon src="/images/icons/xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
+<<<<<<< HEAD:config.xml
 	
 	</widget>
+=======
+	<!-- Splash screen -->
+	<splash src="splash.png" />
+	<icon src="/images/splash/ldpi-p.png" platform="android" qualifier="ldpi" />
+	<icon src="/images/splash/mdpi-p.png" platform="android" qualifier="mdpi" />
+	<icon src="/images/splash/hdpi-p.png" platform="android" qualifier="hdpi" />
+	<icon src="/images/splash/xhdpi-p.png" platform="android" qualifier="xhdpi" />
+	<icon src="/images/splash/xxhdpi-p.png" platform="android" qualifier="xxhdpi" />
+	<icon src="/images/splash/xxxhdpi-p.png" platform="android" qualifier="xxxhdpi" />
+	</widget>
+>>>>>>> adding the splash screen:Config.xml
