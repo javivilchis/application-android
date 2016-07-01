@@ -87,7 +87,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Who is Javi-air?</h2>
                     <hr class="light">
-                    <p class="text-faded">Javi started running when he was in middle school where he ran his first meet as a 100 meter hurdles, 200 meters and 100 meters. He continued his journey in running when he went into high school where he ran Cross Country and Track winning the regional 1st place in CC. Now, he has accomplished many obstacles and races across the U.S. completing his first 100 mile run in Leadville, Co. he continues running in ultra distances.</p>
+                    <p class="text-faded">Javi started running when he was in middle school where he ran his first 100 meter hurdles, 200 meters and 100 meters. He continued his journey in running when he went into high school where he ran Cross Country and Track winning the regional 1st place in CC in 2013. Now, he continues with his running and races across the U.S. He completed his first 100 mile run in Leadville, Co. he continues running in ultra distances, trail and road.</p>
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">His Schedule for the season!</a>
                 </div>
             </div>
@@ -261,7 +261,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Javi is a runner whom likes to run with whomever and more than likely he will share unsolicited advice with you! Go for a run!</p>
+                    <p>Javi is a runner who likes to run, more than likely he will most likely share unsolicited advice if you run with him!</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
@@ -288,74 +288,28 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
-    <script type="text/javascript" charset="utf-8">
+    <script type="text/javascript">
     
-    // take a picture
-    document.addEventListener('deviceready', function(){alert('device ready');}, false);
+    		// take a picture
+    		document.addEventListener('deviceready', function(){ alert('device ready'); }, false);
     
-    function getPicture(){
-    	navigator.camera.getPicture(
-    		function(imagURI){
-    			var image = document.getElementById('myImage');
-    			image.src = imageURI;
-    		},
-    		function(message){
-    			alert('failed because: ' + message);
-    		},
-    		{
-    			quality: 50,
-    			destinationType: Camera.DestinationType.FILE_URI
-    		}
-    	);
-    }
-    
-    
-    
-			// Add to index.js or the first page that loads with your app.
-			// For Intel XDK and please add this to your app.js.
-
-			document.addEventListener('deviceready', function () {
-			  // Enable to debug issues.
-			  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-  
-			  var notificationOpenedCallback = function(jsonData) {
-				console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-				alert('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-			  };
-
-			  window.plugins.OneSignal.init("3aabf1df-f401-48d2-9e20-e5c8669ff254",
-											 {googleProjectNumber: "627825968483"},
-											 notificationOpenedCallback);
-  
-			  // Show an alert box if a notification comes in when the user is in your app.
-			  window.plugins.OneSignal.enableInAppAlertNotification(true);
-			}, false);
-			// Wait for Cordova to load
-			//
-			document.addEventListener("deviceready", onDeviceReady, false);
-
-			// Cordova is ready
-			//
-			function onDeviceReady() {
-				navigator.geolocation.getCurrentPosition(onSuccess, onError);
+			function getPicture(){
+				navigator.camera.getPicture(
+					function(imagURI){
+						var image = document.getElementById('myImage');
+						image.src = imageURI;
+					},
+					function(message){
+						alert('failed because: ' + message);
+					},
+					{
+						quality: 50,
+						destinationType: Camera.DestinationType.FILE_URI
+					}
+				);
 			}
-
-			// onSuccess Geolocation
-			//
-			function onSuccess(position) {
-				var element = document.getElementById('geolocation');
-				element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-									'Longitude: '          + position.coords.longitude             + '<br />' +
-									'Altitude: '           + position.coords.altitude              + '<br />' +
-									'Accuracy: '           + position.coords.accuracy              + '<br />' +
-									'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-									'Heading: '            + position.coords.heading               + '<br />' +
-									'Speed: '              + position.coords.speed                 + '<br />' +
-									'Timestamp: '          +                                   position.timestamp          + '<br />';
-			}
-
-			// onError Callback receives a PositionError object
-			//
+    
+    
 			function onError(error) {
 				alert('code: '    + error.code    + '\n' +
 						'message: ' + error.message + '\n');
