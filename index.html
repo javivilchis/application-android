@@ -30,7 +30,37 @@
 		 
 		<script type="text/javascript" charset="utf-8" src="/js/cordova.js"></script>
 		<script type="text/javascript" charset="utf-8" src="/js/PushNotification.js"></script>
-        
+        <script type="text/javascript">
+    		
+    		// take a picture
+    		document.addEventListener('deviceready', function(){ alert('device ready'); }, false);
+    
+			function getPicture(){
+				navigator.camera.getPicture(
+					function(imagURI){
+						var image = document.getElementById('myImage');
+						image.src = imageURI;
+					},
+					function(message){
+						alert('failed because: ' + message);
+					},
+					{
+						quality: 50,
+						destinationType: Camera.DestinationType.FILE_URI
+					}
+				);
+			}
+    
+    
+			function onError(error) {
+				alert('code: '    + error.code    + '\n' +
+						'message: ' + error.message + '\n');
+			}
+
+
+
+    </script>
+
 		
 	</head>
 	<body id="page-top">
@@ -288,36 +318,6 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
-    <script type="text/javascript">
     
-    		// take a picture
-    		document.addEventListener('deviceready', function(){ alert('device ready'); }, false);
-    
-			function getPicture(){
-				navigator.camera.getPicture(
-					function(imagURI){
-						var image = document.getElementById('myImage');
-						image.src = imageURI;
-					},
-					function(message){
-						alert('failed because: ' + message);
-					},
-					{
-						quality: 50,
-						destinationType: Camera.DestinationType.FILE_URI
-					}
-				);
-			}
-    
-    
-			function onError(error) {
-				alert('code: '    + error.code    + '\n' +
-						'message: ' + error.message + '\n');
-			}
-
-
-
-    </script>
-
 </body>
 </html>
