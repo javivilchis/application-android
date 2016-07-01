@@ -16,6 +16,18 @@
     <author href="https://www.javivilchis.com" email="javivilchis@gmail.com">
         Javi-Air
     </author>
+    <!-- Android only -->
+    <platform name="android" >
+	  <preference name="orientation" value="portrait" />
+	</platform>
+
+	<preference name="android-build-tool" value="ant|gradle" />
+	<preference name="android-minSdkVersion" value="10" />
+	<preference name="android-maxSdkVersion" value="15" />
+	<preference name="android-targetSdkVersion" value="12" />
+	<preference name="android-installLocation" value="auto" />
+	<preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+
 	<platform name="android" platform="android"  />
 	<!-- Plugin -->
 	<preference name="org.apache.cordova.battery-status" />
@@ -34,7 +46,7 @@
 	<icon src="images/icons/xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
 
 	<!-- Splash screen -->
-	<splash src="splash.png" platform="android" />
+	<splash src="splash.png" />
 	<icon src="images/splash/ldpi-p.png" platform="android" qualifier="ldpi" />
 	<icon src="images/splash/mdpi-p.png" platform="android" qualifier="mdpi" />
 	<icon src="images/splash/hdpi-p.png" platform="android" qualifier="hdpi" />
