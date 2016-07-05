@@ -31,6 +31,10 @@
 	<platform name="android" platform="android"  />
 	<!-- Plugin -->
 	<preference name="org.apache.cordova.battery-status" />
+	<feature name="Camera">
+    	<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+	</feature>
+	
 	<plugin name="cordova-plugin-splashscreen" />
 	<plugin name="org.apache.cordova.camera" />
 	<plugin name="org.apache.cordova.dialogs" />
