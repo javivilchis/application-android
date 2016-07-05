@@ -35,8 +35,7 @@
     	<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
 	</feature>
 	
-	<plugin name="cordova-plugin-splashscreen" />
-	<plugin name="org.apache.cordova.camera" />
+	<plugin name="cordova-plugin-splashscreen" />	
 	<plugin name="org.apache.cordova.dialogs" />
 	<!-- Push Plugin -->
 	<plugin name="com.phonegap.plugins.pushplugin" source="pgb" />
@@ -50,13 +49,6 @@
 	<icon src="images/icons/xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
 
 	<!-- Splash screen -->
-	<splash src="splash.png" />
-	<icon src="images/splash/ldpi-p.png" platform="android" qualifier="ldpi" />
-	<icon src="images/splash/mdpi-p.png" platform="android" qualifier="mdpi" />
-	<icon src="images/splash/hdpi-p.png" platform="android" qualifier="hdpi" />
-	<icon src="images/splash/xhdpi-p.png" platform="android" qualifier="xhdpi" />
-	<icon src="images/splash/xxhdpi-p.png" platform="android" qualifier="xxhdpi" />
-	<icon src="images/splash/xxxhdpi-p.png" platform="android" qualifier="xxxhdpi" />
-
+	
 
 </widget>
