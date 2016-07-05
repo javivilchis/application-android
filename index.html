@@ -205,7 +205,9 @@
     var feed = new Instafeed({
         get: 'user',
         userId: '1491706367',
-        accessToken: '1491706367.c1b0536.e5e2965027cb41559a963b39341d0bd3',		
+        accessToken: '1491706367.c1b0536.e5e2965027cb41559a963b39341d0bd3',	
+        limit: 6,
+        //template: ' <div class="col-lg-4 col-sm-6"><a href="{{link}}" class="portfolio-box"><img src="{{image}}" width="{{width}}" class="img-responsive" alt=""><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">{{type}}</div><div class="project-name">{{caption}}</div></div></div></a></div>'	
         template: ' <div class="col-lg-4 col-sm-6"><a href="{{image}}" class="portfolio-box"><img src="{{image}}" width="{{width}}" class="img-responsive" alt=""><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">{{type}}</div><div class="project-name">{{caption}}</div></div></div></a></div>'
     });
     feed.run();
@@ -229,7 +231,7 @@
 				);
 			}
     
-getPicture();
+
 			function onError(error) {
 				alert('code: '    + error.code    + '\n' +
 						'message: ' + error.message + '\n');
