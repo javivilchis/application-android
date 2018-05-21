@@ -35,7 +35,7 @@
 	<preference name="classpath" value="com.google.gms:google-services:3.2.0" />
 	<preference name="compile" value="com.google.firebase:firebase-core:12.0.1" />
 	<preference nae="appy plugin" value="com.google.gms.google-services" />
-	<plugin name="cordova-plugin-splashscreen" />
+	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
 
 	
 	<!-- icons -->
