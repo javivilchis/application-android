@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1850703855",
+    "firebase_url": "https://torid-fire-3018.firebaseio.com",
+    "project_id": "torid-fire-3018",
+    "storage_bucket": "torid-fire-3018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1850703855:android:5c0ee7e2bdb19b4f",
+        "android_client_info": {
+          "package_name": "application.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1850703855-9bi7srrbmqs521ukod3vkuhcj3mcsc99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4xtm3jlwxje-K7kZehPrwAAVEPklO2IM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
