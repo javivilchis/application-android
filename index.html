@@ -200,47 +200,23 @@ v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/pushbots.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
     <!-- instafeed -->
     <script type="text/javascript" src="js/instafeed.min.js"></script>
     <script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'user',
-        userId: '1491706367',
-        accessToken: '1491706367.c1b0536.e5e2965027cb41559a963b39341d0bd3',	
-        limit: 6,
-        //template: ' <div class="col-lg-4 col-sm-6"><a href="{{link}}" class="portfolio-box"><img src="{{image}}" width="{{width}}" class="img-responsive" alt=""><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">{{type}}</div><div class="project-name">{{caption}}</div></div></div></a></div>'	
-        template: ' <div class="col-lg-4 col-sm-6"><a href="{{image}}" class="portfolio-box"><img src="{{image}}" width="{{width}}" class="img-responsive" alt=""><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">{{type}}</div><div class="project-name">{{caption}}</div></div></div></a></div>'
-    });
-    feed.run();
-    
-    /// Take picture
-		document.addEventListener('deviceready', function(){ alert('device ready'); }, false);
-    
-			function getPicture(){
-				navigator.camera.getPicture(
-					function(imagURI){
-						var image = document.getElementById('myImage');
-						image.src = imageURI;
-					},
-					function(message){
-						alert('failed because: ' + message);
-					},
-					{
-						quality: 50,
-						destinationType: Camera.DestinationType.FILE_URI
-					}
-				);
-			}
-    
+    window.plugins.PushbotsPlugin.initialize("5b27d31b1db2dc7bd944a533", {"android":{"sender_id":"816425146830"}});
+	// Only with First time registration
+	window.plugins.PushbotsPlugin.on("registered", function(token){
+		console.log("Registration Id:" + token);
+	});
 
-			function onError(error) {
-				alert('code: '    + error.code    + '\n' +
-						'message: ' + error.message + '\n');
-			}
-    
+	//Get user registrationId/token and userId on PushBots, with evey launch of the app even launching with notification
+	window.plugins.PushbotsPlugin.on("user:ids", function(data){
+		console.log("user:ids" + JSON.stringify(data));
+	});
 	</script>
 </body>
 </html>

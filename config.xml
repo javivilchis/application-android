@@ -7,7 +7,7 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Javi-air</name>
+    <name>Javier</name>
 
     <description>
         This app is for the use of Javier Vilchis a long distance runner based in Irving, Texas. 
@@ -55,6 +55,33 @@
 	<icon src="images/splash/xhdpi-p.png" platform="android" qualifier="xhdpi" />
 	<icon src="images/splash/xxhdpi-p.png" platform="android" qualifier="xxhdpi" />
 	<icon src="images/splash/xxxhdpi-p.png" platform="android" qualifier="xxxhdpi" / -->
-
+	<!-- Urban Airship app credentials -->
+	<preference name="com.urbanairship.production_app_key" value="sL76phgtQbyyVLVs9AZ_5Q" />
+	<preference name="com.urbanairship.production_app_secret" value="5sGH1R21TFGWUTOU2hx0RA" />
+	<preference name="com.urbanairship.development_app_key" value="sL76phgtQbyyVLVs9AZ_5Q" />
+	<preference name="com.urbanairship.development_app_secret" value="5sGH1R21TFGWUTOU2hx0RA" />
+	<!-- Required for Android. -->
+	<preference name="com.urbanairship.gcm_sender" value="GCM_SENDER_ID_PLACEHOLDER" />
+	<!-- If the app is in production or not -->
+	<preference name="com.urbanairship.in_production" value="false" />
+	<!-- Optional config values -->
+	<!-- Enable push when the application launches -->
+	<preference name="com.urbanairship.enable_push_onlaunch" value="true" />
+	<!-- Enable Analytics when the application launches -->
+	<!-- Warning: Features that depend on analytics being enabled may not work properly if analytics is disabled (reports, location segmentation, region triggers, push to local time). -->
+	<preference name="com.urbanairship.enable_analytics" value="true" />
+	<preference name="com.urbanairship.development_log_level" value="debug" />
+	<!-- Override the Android notification icon -->
+	<preference name="com.urbanairship.notification_icon" value="ic_notification" />
+	<!-- Specify the notification accent color for Android API 21+ (Lollipop) -->
+	<preference name="com.urbanairship.notification_accent_color" value="#0000ff" />
+	<!-- Clear the iOS badge on launch -->
+	<preference name="com.urbanairship.clear_badge_onlaunch" value="true" />
+	<!-- iOS 10 alert foreground notification presentation option -->
+	<preference name="com.urbanairship.ios_foreground_notification_presentation_alert" value="true"/>
+	<!-- iOS 10 badge foreground notification presentation option -->
+	<preference name="com.urbanairship.ios_foreground_notification_presentation_badge" value="true"/>
+	<!-- iOS 10 sound foreground notification presentation option -->
+	<preference name="com.urbanairship.ios_foreground_notification_presentation_sound" value="true"/>
 
 </widget>
