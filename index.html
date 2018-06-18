@@ -34,6 +34,12 @@ v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,
     vapidPublicKey: 'BJk_D9l9xzD5y4D-IzwEdNXiNd-751AKs4KdlNIf0algFkZ7XhG1eVIWXl7q5Q1ZEqBSaXriFJr1U_CKUe276mU='
   });
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+   window.plugins.PushbotsPlugin.initialize("5b27d31b1db2dc7bd944a533", {"android":{"sender_id":"816425146830"}});
+}
+
 </script>
 		
 	</head>
@@ -206,8 +212,6 @@ v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,
     <script src="js/creative.js"></script>
     <!-- instafeed -->
     <script type="text/javascript" src="js/instafeed.min.js"></script>
-    <script type="text/javascript">
-    window.plugins.PushbotsPlugin.initialize("5b27d31b1db2dc7bd944a533", {"android":{"sender_id":"816425146830"}});
-	</script>
+   
 </body>
 </html>
