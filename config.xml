@@ -37,6 +37,9 @@
 	<preference nae="appy plugin" value="com.google.gms.google-services" />
 	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
 
+	<gap:plugin name="pushbots-cordova-plugin" spec="1.5.x" source="npm" />
+	<preference name="android-minSdkVersion" value="15" />
+	<preference name="android-build-tool" value="gradle" />
 	
 	<!-- icons -->
 	<icon src="icon.png" />
